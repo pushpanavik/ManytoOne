@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+ <hibernate-mapping>
+ <class name="model.Customer" table="Customer100">
+ <id name="cid"></id>
+ <property  name="cname" column="CName"></property>
+ <property name="vid" column="VID" insert="false" update="false"></property>
+ <many-to-one name="vendor" column="VID" class="model.Vendor" cascade="all" lazy="false"></many-to-one>
+ </class>
+ </hibernate-mapping>
